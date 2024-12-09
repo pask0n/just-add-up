@@ -1,5 +1,6 @@
 const textarea = document.querySelector(".textarea"),
 submitBtn = document.querySelector(".submit-btn"),
+clearBtn = document.querySelector(".clear-btn")
 output = document.querySelector(".output")
 
 submitBtn.addEventListener("click", () => {
@@ -15,4 +16,8 @@ submitBtn.addEventListener("click", () => {
     finalArr = finalArr.flat().map(item => parseInt(item))
     
     output.textContent = finalArr.reduce((total, item) => total + item, 0)
+})
+
+clearBtn.addEventListener("click", () => {
+    textarea.value = "";
 })
